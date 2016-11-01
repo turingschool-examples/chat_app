@@ -1,0 +1,21 @@
+<div class="col-md-8 col-md-offset-2 top-padding">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      LET'S CHAT!
+    </div>
+    <div id="messages" class="panel-body">
+      <%= render 'messages' %>
+    </div>
+    <div class="panel-footer">
+      <div>
+        <%= form_for(@message, :html => {:class => "input-group"}) do |f| %>
+          <%= f.text_field :content, placeholder: "Enter Message", class:
+            "form-control" %>
+          <span class="input-group-btn">
+            <%= f.submit "SEND", class:"btn btn-info" %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
